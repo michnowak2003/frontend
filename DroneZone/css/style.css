@@ -21,6 +21,7 @@
 header{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: center;
     min-height: 154px;
 }
@@ -98,49 +99,39 @@ header ul li a:hover{
     animation-fill-mode: forwards;
 }
 
+.scroll{
+    opacity: 0.5;
+    margin-bottom: 50px;
+}
+
+.scroll:hover{
+    animation-name: hover-opacity;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 /*Transparent button animation*/
 @keyframes hover{
-    from{
-        background-color: transparent;
-    }
     to{
         background-color: rgba(255, 255, 255, 0.5);
     }
 }
 
-#showcase figure{
-    opacity: 0.5;
-    margin-bottom: 50px;
-}
-
-#showcase figure:hover{
-    opacity: 0.8;
+@keyframes hover-opacity{
+    to{
+        opacity: 1;
+    }
 }
 
 /*Advantages*/
-#background-advatages{
-    background: #f6f6f6;
-    width: 100%;
-    height: 600px;
+#background-advantages{
+    background-color: #f4f5fc;
 }
 
-#advantages{
-    height: 600px;
-    padding: 120px, 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    text-align: center;
-}
-
-.box-wrapper{
-    display: flex;
-    justify-content: space-between;
-}
 .box{
+    min-width: 200px;
+    width: 300px;
     text-align: center;
-    max-width: 250px;
 }
 
 .box h3{
@@ -154,9 +145,13 @@ header ul li a:hover{
     color: #d0d1d5;
 }
 
-#advantages a{
+.bottom-button{
+    text-align: center;
+}
+
+.bottom-button a{
+    display:inline-block;
     border-radius: 28px;
-    border: 1px solid #FFF;
     padding: 20px 54px;
     text-decoration: none;
     color: #FFF;
@@ -164,3 +159,20 @@ header ul li a:hover{
     background: linear-gradient(30deg, #29489a, #4964a9);
 }
 
+/*Advantages position */
+#advantages{
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 25px 0;
+}
+
+.box-wrapper{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
