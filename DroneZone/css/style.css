@@ -72,11 +72,14 @@ header ul li a:hover{
     opacity: 0.5;
 }
 
-#buttons{
+#buttons-div{
     padding-bottom: 140px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-#buttons a{
+#buttons-div a{
     border-radius: 28px;
     border: 1px solid #FFF;
     padding: 20px 54px;
@@ -84,16 +87,16 @@ header ul li a:hover{
     text-decoration: none;
 }
 
-.white-button{
+.white{
     background: #FFF;
     color: #d32721;
 }
 
-.transparent-button{
+.transparent{
     color: #FFF;
 }
 
-.transparent-button:hover{
+.transparent:hover{
     animation-name: hover;
     animation-duration: 1s;
     animation-fill-mode: forwards;
