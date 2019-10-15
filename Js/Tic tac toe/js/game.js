@@ -1,21 +1,21 @@
-var count = 0;
-var Array = [];
+let round = 0;
+let field_number = [];
 
-//create 2d array
-for (var i = 0; i < 3; i++) {
-    Array[i] = [];
+//create 2d field_number
+for (let i = 0; i < 3; i++) {
+    field_number[i] = [];
 }
 
 function point(number) {
     if (document.getElementById(number).innerHTML == "") {
-        if (count % 2 == 0) {
+        if (round % 2 == 0) {
             document.getElementById(number).innerHTML = "X"; //insert "X"
             insertToArray(number, 'x'); //insert char to array and check winner
         } else {
             document.getElementById(number).innerHTML = "O"; //insert "O"
             insertToArray(number, 'o'); //insert char to array and check winner
         };
-        count += 1;
+        round += 1;
     }
 };
 
@@ -24,23 +24,23 @@ function insertToArray(number, mark) {
     a = number.charAt(0);
     b = number.charAt(number.length - 1);
 
-    Array[a][b] = mark;
+    field_number[a][b] = mark;
 
     checkWinner(mark);
 }
 
 //checking winner
 function checkWinner(mark) {
-    if (Array[0][0] == mark && Array[0][1] == mark && Array[0][2] == mark ||
-        Array[1][0] == mark && Array[1][1] == mark && Array[1][2] == mark ||
-        Array[2][0] == mark && Array[2][1] == mark && Array[2][2] == mark ||
+    if (field_number[0][0] == mark && field_number[0][1] == mark && field_number[0][2] == mark ||
+        field_number[1][0] == mark && field_number[1][1] == mark && field_number[1][2] == mark ||
+        field_number[2][0] == mark && field_number[2][1] == mark && field_number[2][2] == mark ||
 
-        Array[0][0] == mark && Array[1][0] == mark && Array[2][0] == mark ||
-        Array[0][1] == mark && Array[1][1] == mark && Array[2][1] == mark ||
-        Array[0][2] == mark && Array[1][2] == mark && Array[2][2] == mark ||
+        field_number[0][0] == mark && field_number[1][0] == mark && field_number[2][0] == mark ||
+        field_number[0][1] == mark && field_number[1][1] == mark && field_number[2][1] == mark ||
+        field_number[0][2] == mark && field_number[1][2] == mark && field_number[2][2] == mark ||
 
-        Array[0][0] == mark && Array[1][1] == mark && Array[2][2] == mark ||
-        Array[0][2] == mark && Array[1][1] == mark && Array[2][0] == mark
+        field_number[0][0] == mark && field_number[1][1] == mark && field_number[2][2] == mark ||
+        field_number[0][2] == mark && field_number[1][1] == mark && field_number[2][0] == mark
     ) {
         if (mark == 'x') {
             document.getElementById("winner-h1").innerHTML = "Winner: X"
@@ -74,11 +74,11 @@ function reset() {
     document.getElementById('22').innerHTML = "";
 
     /*clearing and creating new array*/
-    Array.length = 0;
-    Array = [];
+    field_number.length = 0;
+    field_number = [];
 
     for (var i = 0; i < 3; i++) {
-        Array[i] = [];
+        field_number[i] = [];
     }
 
     /*hide div after clicking reset button*/
