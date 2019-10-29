@@ -10,7 +10,7 @@ function rollDice() {
     let randomNumber = Math.floor(Math.random() * 6) + 1;
 
     document.getElementById("dice").style.display = "block";
-    document.getElementById("dice").src = "../assets/dice-" + randomNumber + ".png";
+    document.getElementById("dice").src = "assets/dice-" + randomNumber + ".png";
 
     currentScore(randomNumber);
   }
