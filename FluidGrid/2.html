@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .l-col {
+            background: #ffbd73;
+        }
+
+        .container {
+            background: #eee;
+            min-height: 200px;
+        }
+
+        .page-row {
+            padding: 0 20px;
+        }
+
+        /*Czy konieczne jest dopisanie selektora .page-row? Jezeli go nie ma, skrajne pomaranczowe bloki nie mieszczą się na stronie. */
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="homepage">
+    <div class="page-row">
+        <div class="l-row">
+            <div class="l-col l-col-3">
+                <div class="container"></div>
+            </div>
+            <div class="l-col l-col-6">
+                <div class="l-row">
+                    <div class="l-col l-col-4">
+                        <div class="container"></div>
+                    </div>
+                    <div class="l-col l-col-4">
+                        <div class="container"></div>
+                    </div>
+                    <!--Ponizej dodałem jedną kolumnę wiecej niz na pokazanej strukturze w ćwiczeniu, wydaje mi sie, ze jest tam błąd.-->
+                    <div class="l-col l-col-4">
+                        <div class="container"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="l-col l-col-3">
+                <div class="container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
