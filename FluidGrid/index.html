@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    .clearfix:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .l-col {
+      background: #ffbd73;
+      height: 200px;
+      float: left;
+    }
+
+    .l-col-3 {
+      width: 25%;
+    }
+
+    .l-col-6 {
+      width: 50%;
+    }
+
+    .container {
+      background: #eee;
+      min-height: 200px;
+      margin: 0 20px;
+    }
+  </style>
+</head>
+
+<body id="homepage">
+  <div class="l-row clearfix">
+    <div class="l-col l-col-3">
+      <div class="container"></div>
+    </div>
+    <div class="l-col l-col-6">
+      <div class="container"></div>
+    </div>
+    <div class="l-col l-col-3">
+      <div class="container"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
